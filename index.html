@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player App Documentation</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/w3css.css">
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar sticky">
+        <div class="nav-brand">
+            <h1>🎵 Music Player</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#overview" class="active">Overview</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#usage">Usage</a></li>
+            <li><a href="#technical">Technical</a></li>
+            <li><a href="#support">Support</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Music Player App</h1>
+            <p class="subtitle">A beautiful JavaFX application for organizing and playing your music collection</p>
+            <div class="cta-buttons">
+                <a href="#installation" class="btn btn-primary">Get Started</a>
+                <a href="#features" class="btn btn-secondary">View Features</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Overview Section -->
+        <section id="overview" class="mg-section">
+            <div class="card">
+                <h2>Overview</h2>
+                <p>The Music Player App is a modern, intuitive JavaFX application designed to provide a seamless music listening experience. Built with performance and user experience in mind, it offers two main views: a library view for browsing your music collection and a player view for controlling playback.</p>
+                
+                <div class="cards">
+                    <div class="card">
+                        <h3>🎯 Purpose</h3>
+                        <p>Provide a clean, efficient way to organize and play your local music files with an elegant interface and robust functionality.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🎹 Technology</h3>
+                        <p>Built with Java and JavaFX, leveraging modern UI principles and efficient media handling capabilities.</p>
+                    </div>
+                    <div class="card">
+                        <h3>🚀 Performance</h3>
+                        <p>Optimized for smooth performance even with large music libraries, featuring efficient file scanning and metadata handling.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="mg-section">
+            <div class="card">
+                <h2>Features</h2>
+                <p>The Music Player App comes packed with features designed to enhance your music listening experience:</p>
+                
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">📁</div>
+                        <h3>Library Management</h3>
+                        <p>Organize and browse your music collection with an intuitive table view showing title, artist, album, and duration.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎮</div>
+                        <h3>Playback Controls</h3>
+                        <p>Full control over playback with play, pause, stop, next, previous, and seek functionality.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📊</div>
+                        <h3>Progress Tracking</h3>
+                        <p>Visual progress slider with real-time updates and time display for precise navigation.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔊</div>
+                        <h3>Volume Control</h3>
+                        <p>Adjustable volume slider with smooth transitions and visual feedback.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🔄</div>
+                        <h3>Dual View Interface</h3>
+                        <p>Seamlessly switch between library view and player view with smooth transitions.</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Fast Navigation</h3>
+                        <p>Double-click songs to play instantly or use keyboard shortcuts for efficient control.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation Section -->
+        <section id="installation" class="mg-section">
+            <div class="card">
+                <h2>Installation Guide</h2>
+                <p>Follow these steps to install and run the Music Player App on your system:</p>
+
+                <div class="prereq-cards">
+                    <div class="prereq-card">
+                        <h3>Java 11+</h3>
+                        <p>Java Development Kit 11 or later required</p>
+                        <a href="https://openjdk.org/" class="btn-link">Download</a>
+                    </div>
+                    <div class="prereq-card">
+                        <h3>JavaFX SDK</h3>
+                        <p>JavaFX 11 or later SDK</p>
+                        <a href="https://openjfx.io/" class="btn-link">Download</a>
+                    </div>
+                    <div class="prereq-card">
+                        <h3>System Requirements</h3>
+                        <p>2GB RAM, 100MB storage</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h3>Step 1: Download and Extract</h3>
+                    <p>Download the latest release from GitHub and extract the ZIP file to your preferred location.</p>
+                </div>
+
+                <div class="step">
+                    <h3>Step 2: Set up JavaFX</h3>
+                    <p>Ensure JavaFX SDK is properly installed and configured on your system path.</p>
+                </div>
+
+                <div class="step">
+                    <h3>Step 3: Run the Application</h3>
+                    <p>Execute the application using the provided script or run the JAR file directly.</p>
+                    <div class="code-block">
+                        <pre>java --module-path /path/to/javafx-sdk/lib \
+     --add-modules javafx.controls,javafx.fxml,javafx.media \
+     -jar MusicPlayer.jar</pre>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <h3>Running from Source</h3>
+                    <p>To compile and run from source code:</p>
+                    <div class="code-block">
+                        <pre># Clone the repository
+git clone https://github.com/Fatherly-P-Titus/music-player-app.git
+
+# Navigate to project directory
+cd music-player-app
+
+# Compile the project
+javac --module-path /path/to/javafx-sdk/lib \
+      --add-modules javafx.controls,javafx.fxml,javafx.media \
+      -d out src/**/*.java
+
+# Run the application
+java --module-path /path/to/javafx-sdk/lib \
+     --add-modules javafx.controls,javafx.fxml,javafx.media \
+     -cp out com.musicplayer.Main</pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Usage Section -->
+        <section id="usage" class="mg-section">
+            <div class="card">
+                <h2>How to Use</h2>
+                <p>Learn how to make the most of your Music Player App with these usage guidelines:</p>
+
+                <div class="controls-grid">
+                    <h3>Keyboard Shortcuts</h3>
+                    <div class="control-item">
+                        <div class="key">Space</div>
+                        <div>
+                            <h4>Play/Pause</h4>
+                            <p>Toggle between playing and pausing the current track</p>
+                        </div>
+                    </div>
+                    <div class="control-item">
+                        <div class="key key-arrow">→</div>
+                        <div>
+                            <h4>Next Track</h4>
+                            <p>Skip to the next song in your library</p>
+                        </div>
+                    </div>
+                    <div class="control-item">
+                        <div class="key key-arrow">←</div>
+                        <div>
+                            <h4>Previous Track</h4>
+                            <p>Go back to the previous song</p>
+                        </div>
+                    </div>
+                    <div class="control-item">
+                        <div class="key key-space">Space</div>
+                        <div>
+                            <h4>Stop Playback</h4>
+                            <p>Completely stop the current playback</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mechanics-grid">
+                    <div class="mechanic-card">
+                        <h3>🎵 Adding Music</h3>
+                        <p>The app automatically scans for music files in common formats (MP3, WAV, M4A, etc.). Simply place your music files in the designated music folder or use the file browser to add directories.</p>
+                    </div>
+                    <div class="mechanic-card">
+                        <h3>📋 Library Navigation</h3>
+                        <p>Browse your music collection in a clean table format. Sort by title, artist, album, or duration. Double-click any song to start playing immediately.</p>
+                    </div>
+                    <div class="mechanic-card">
+                        <h3>🎛️ Playback Control</h3>
+                        <p>Use the player view to control playback, adjust volume, and monitor progress. The seek bar allows precise navigation through tracks.</p>
+                    </div>
+                </div>
+
+                <div class="tips-list">
+                    <h3>Pro Tips</h3>
+                    <div class="tip">
+                        <h4>Organize Your Files</h4>
+                        <p>Keep your music files well-organized in folders by artist or genre for easier browsing in the library view.</p>
+                    </div>
+                    <div class="tip">
+                        <h4>Use Keyboard Shortcuts</h4>
+                        <p>Master the keyboard shortcuts for a more efficient music listening experience without reaching for the mouse.</p>
+                    </div>
+                    <div class="tip">
+                        <h4>Volume Presets</h4>
+                        <p>Set your preferred volume level - the app will remember it between sessions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Details Section -->
+        <section id="technical" class="mg-section">
+            <div class="card">
+                <h2>Technical Details</h2>
+                <p>Technical information for developers and advanced users:</p>
+
+                <div class="class-docs">
+                    <div class="class-card">
+                        <h3>Application Architecture</h3>
+                        <div class="class-description">
+                            The app follows the Model-View-Controller (MVC) pattern with clear separation of concerns.
+                        </div>
+                        
+                        <div class="relationship-diagram">
+                            <div class="relationship">
+                                <div class="class-box">Main.java</div>
+                                <div class="relationship-arrow">→</div>
+                                <div class="class-box">Application Entry</div>
+                            </div>
+                            <div class="relationship">
+                                <div class="class-box">ListViewController</div>
+                                <div class="relationship-arrow">→</div>
+                                <div class="class-box">Library Management</div>
+                            </div>
+                            <div class="relationship">
+                                <div class="class-box">PlayerViewController</div>
+                                <div class="relationship-arrow">→</div>
+                                <div class="class-box">Playback Control</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="class-card">
+                        <h3>Key Classes</h3>
+                        <div class="method-list">
+                            <div class="method">
+                                <code>Main</code>
+                                <p>Application entry point, initializes JavaFX environment and loads the main view.</p>
+                            </div>
+                            <div class="method">
+                                <code>ListViewController</code>
+                                <p>Manages the library view, handles song listing, and navigation to player view.</p>
+                            </div>
+                            <div class="method">
+                                <code>PlayerViewController</code>
+                                <p>Controls playback, volume, progress tracking, and media player interactions.</p>
+                            </div>
+                            <div class="method">
+                                <code>Song</code>
+                                <p>Model class representing a music track with properties for metadata and file information.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="class-card">
+                        <h3>Supported Formats</h3>
+                        <div class="constants">
+                            <p>The application supports the following audio formats:</p>
+                            <ul>
+                                <li>MP3 (.mp3)</li>
+                                <li>WAV (.wav)</li>
+                                <li>M4A (.m4a)</li>
+                                <li>AIFF (.aiff)</li>
+                                <li>FLAC (.flac)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="class-card">
+                        <h3>Dependencies</h3>
+                        <div class="piece-grid">
+                            <div class="piece-item">JavaFX 11+</div>
+                            <div class="piece-item">Java Media Framework</div>
+                            <div class="piece-item">Java 11+ Runtime</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section id="support" class="mg-section">
+            <div class="card">
+                <h2>Support & Contact</h2>
+                <p>Get help, report issues, or learn more about the developer:</p>
+
+                <div class="developer-info" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 2rem; border-radius: 10px; color: white; text-align: center;">
+                    <h3 style="color: white;">Developer Information</h3>
+                    <p class="bold" style="font-size: 1.2rem; margin-bottom: 1.5rem;">Fatherly P. Titus</p>
+                    
+                    <div class="row" style="justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                        <div class="contact-item">
+                            <span class="bold">🌐 Website:</span>
+                            <a href="https://fatherly-p-titus.github.io/fatherlytitus.github.io/" style="color: white;" target="_blank">Developer Portfolio</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="bold">📱 Phone:</span>
+                            <a href="tel:+2349018063499" style="color: white;">+234-901-806-3499</a>
+                        </div>
+                        <div class="contact-item">
+                            <span class="bold">🐙 GitHub:</span>
+                            <a href="https://github.com/Fatherly-P-Titus" style="color: white;" target="_blank">Fatherly-P-Titus</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="issues">
+                    <h3>Frequently Asked Questions</h3>
+                    
+                    <div class="issue">
+                        <h4>Why can't I see my music files?</h4>
+                        <p>Ensure your audio files are in a supported format (MP3, WAV, M4A) and located in a directory that the app has permission to access. Use the folder scanning feature to add your music directories.</p>
+                    </div>
+                    
+                    <div class="issue">
+                        <h4>The app crashes when playing certain files</h4>
+                        <p>This might be caused by corrupted audio files or unsupported codecs. Try playing the file in another media player to verify it's not corrupted.</p>
+                    </div>
+                    
+                    <div class="issue">
+                        <h4>No sound from the application</h4>
+                        <p>Check your system volume, ensure the app volume slider is up, and verify that no other application is exclusively using your audio device.</p>
+                    </div>
+                    
+                    <div class="issue">
+                        <h4>Performance issues with large libraries</h4>
+                        <p>The app is optimized for performance, but very large libraries (10,000+ songs) may experience slower loading times. Consider organizing your music into separate folders.</p>
+                    </div>
+                </div>
+
+                <div class="ide-tabs">
+                    <h3>Troubleshooting Common Issues</h3>
+                    
+                    <div class="ide-tab">
+                        <h4>JavaFX Not Found</h4>
+                        <p>If you encounter errors related to JavaFX modules, ensure you've properly set the module path:</p>
+                        <div class="code-block">
+                            <pre>--module-path /path/to/javafx-sdk/lib \
+--add-modules javafx.controls,javafx.fxml,javafx.media</pre>
+                        </div>
+                    </div>
+                    
+                    <div class="ide-tab">
+                        <h4>Audio Playback Issues</h4>
+                        <p>If audio doesn't play, check that:</p>
+                        <ol>
+                            <li>Your system audio is working</li>
+                            <li>No other app is blocking audio output</li>
+                            <li>File permissions allow reading the audio files</li>
+                            <li>Audio files are not corrupted</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Fatherly P. Titus. All rights reserved.</p>
+        <p>Music Player App - Enjoy Your Music Collection</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="fix-bl btn btn-primary" style="border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">↑</a>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update active navigation link based on scroll position
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Back to top button visibility
+        const backToTopBtn = document.querySelector('.fix-bl');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.style.display = 'flex';
+            } else {
+                backToTopBtn.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
